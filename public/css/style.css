@@ -1,0 +1,60 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-family: roboto;
+  font-style: bold;
+  font: weight 700;
+}
+
+h3 {
+  font-style: regular;
+  font-weight: 400;
+}
+
+.header__logo {
+  width: 100%;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.header__logo img {
+  width: 8rem;
+  height: auto;
+}
+
+.header__form {
+  width: 100%;
+  margin-bottom: 0px;
+}
+.header__form--champtext {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  border-top: 5px solid;
+  border-image: linear-gradient(180deg, #bebdbd, #eaeaea) 90;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  height: 50px;
+  background-color: #eaeaea;
+}
+
+.banniere {
+  width: 100%;
+  height: 286px;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.banniere__titre {
+  font-size: 1.5rem;
+  margin: 0px;
+  padding-top: 2rem;
+}
+.banniere__byline {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

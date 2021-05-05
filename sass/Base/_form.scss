@@ -1,0 +1,17 @@
+.header__form{
+    width: 100%;
+    margin-bottom: 0px;
+    &--champtext{
+        width: 100%;
+        text-align: center;
+        font-size: $font-size-secondary;
+        border-top: 5px  solid;
+        border-image:linear-gradient(180deg,rgb(190, 189, 189),$colour-gris) 90;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        
+        height: 50px;
+        background-color: $colour-gris;
+    }
+}
