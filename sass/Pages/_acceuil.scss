@@ -1,8 +1,12 @@
 .banniere{
     width: 100%;
     height: 286px;
+    display: flex;
+    flex-direction: column;
     background-color:#f6f6f6 ;
     text-align: center;
+    align-items: center;
+    
 
     &__titre{
         font-size: $font-size-primary;
@@ -12,4 +16,10 @@
     &__byline{
         font-size:$font-size-secondary;
     }
+}
+
+.btn{
+    @include btn;
+    margin-top: 1rem;
+    
 }

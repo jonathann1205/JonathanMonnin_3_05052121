@@ -1,0 +1,21 @@
+@mixin btn {
+    width:14rem;
+    height: 50px;
+    display: flex;
+    color: white;
+    background-image: linear-gradient(350deg, ($colour-primary, $colour-secondary)65%);
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    &:visited{
+        color: white;
+    }
+    &:link{
+        color: white;
+        text-decoration: none;
+    }
+    &:hover{
+        background-image: linear-gradient(350deg, (((lighten($colour-primary,8%)), (lighten($colour-secondary,8%))) 65%));
+    }
+
+}
