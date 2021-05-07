@@ -1,0 +1,44 @@
+footer{
+    background-color: #353535;
+    width: 100%;
+    height: 200px;
+    
+}
+ h1{
+     color: white;
+     font-size: 1.5rem;
+     padding-top: 20px;
+ }
+.footer{
+    padding-left: 23px;
+    &__text {
+        color: white;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        &--li{
+            margin-bottom: 10px;  
+        }
+        &--lien{
+            
+
+            &:link{
+                color: inherit;
+                text-decoration: none;
+            }
+            &:visited{
+                color:inherit;
+            }
+        }
+    }
+}
+
+.fa-utensils{
+    margin-right: 11px;
+}
+
+.fa-hands-helping{
+    margin-right: 10px;
+    font-size: 0.7rem;
+}

@@ -1,9 +1,11 @@
+// bannier
+
 .banniere{
     width: 100%;
     height: 286px;
     display: flex;
     flex-direction: column;
-    background-color:#f6f6f6 ;
+    background-color:lighten($colour-gris,5%) ;
     text-align: center;
     align-items: center;
     
@@ -19,7 +21,213 @@
 }
 
 .btn{
-    @include btn;
+    @include btn-pink;
     margin-top: 1rem;
     
 }
+
+// zone Fonctionnement
+
+.blockEtape {
+
+    width: 100%;
+    margin-left: $marginleft;
+    display: flex;
+    flex-direction: column;
+
+    &__titre{
+        margin-bottom: 18px;
+    }
+
+    &--btn{
+        display: flex;
+        justify-content:flex-start;
+     
+      
+    }
+
+    & ul{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        margin-left: 14px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding:0px;
+     
+    }
+
+   
+
+   
+
+    &__btn1{
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        color: $colour-white;
+        background: $colour-primary;
+        border-radius: 50px;
+        margin-right: 5px;
+        line-height: 24px;
+        position: absolute;
+        left:33px;
+        top: 507px;
+        
+    }
+
+    &__btn2{
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        color: $colour-white;
+        background: $colour-primary;
+        border-radius: 50px;
+        margin-right: 5px;
+        line-height: 24px;
+        position: absolute;
+        left:33px;
+        top: 602px;
+
+    }
+
+    &__btn3{
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        color: $colour-white;
+        background: $colour-primary;
+        border-radius: 50px;
+        margin-right: 5px;
+        line-height: 24px;
+        position: absolute;
+        left:33px;
+        top: 701px;
+
+    }
+    
+    &__btn{
+        @include btn-gris;
+        font-size: $font-size-secondary;
+        font-weight: 500;
+        margin-top: 1.5em;
+        &:hover > li > .blockEtape__btn--icon1 {
+            color:$colour-primary;
+        }
+        &:hover > li > .blockEtape__btn--icon2 {
+            color:$colour-primary;
+        }
+        &:hover > li > .blockEtape__btn--icon3 {
+            color:$colour-primary;
+        }
+    
+        
+        &--icon1{
+            display: block;
+            margin-right: 20px;
+            margin-left: 40px;
+            font-size: 20px;
+            color:gray;
+            
+        }
+        &--icon2{
+            display: block;
+            margin-right: 10px;
+            margin-left: 40px;
+            font-size: 20px;
+            color:gray;
+            
+        }
+        &--icon3{
+            display: block;
+            margin-right: 8px;
+            margin-left: 40px;
+            font-size: 20px;
+            color:gray;
+            
+        }
+       
+    
+  
+    }
+}
+
+
+
+
+
+//zone resto
+
+.resto{
+    width: 100%;
+    height: auto;
+    padding-left: $marginleft;
+    padding-bottom: 20px;
+    background-color:lighten($colour-gris,5%) ;
+    h2 {
+        width: 336px;
+    }
+    
+    &--prev{
+        @include img-resto;
+        box-shadow: 3PX 3PX 5px darken($colour-gris,20%);
+        & a{
+            @include suppliens;
+        }
+        &--text{
+            @include text-resto;
+            
+        }
+        &__new{
+            @include textnew;
+        }
+
+        // fichier pour bouger le texte quand on apliqqque le textnew
+        &--text1{
+            top: 106px;
+        }
+        &--text2{
+            top: 106px;
+        }
+        &--heart{
+            position: relative;
+            width: 60px;
+            top: 96px;
+            left:250px ;
+            z-index: 2;
+            font-size: 1.9rem;
+          &__full{
+                position: absolute;
+                color: red;
+                opacity: 0;
+
+            }
+            &__vide{
+                position: relative;
+                color:darken($colour-gris,20%);
+                left: 30px;
+                opacity: 1;
+                z-index: 2;
+                &:hover{
+                    opacity: 0;
+                }
+                &:hover + .resto--prev--heart__full  {
+                    opacity: 1;
+                }
+            }
+            
+        } 
+        &--heart1 {
+            top: 49px;
+        }
+        &--heart2 {
+            top: 49px;
+        }
+
+        
+        
+        
+    }
+    
+}
+
