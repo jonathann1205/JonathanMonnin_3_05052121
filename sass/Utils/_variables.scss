@@ -3,6 +3,7 @@ $colour-secondary:#FF79DA;
 $colour-tertiaire:#99E2D0;
 $colour-gris:#eaeaea;
 $colour-white:white;
+$colour-degrade: -webkit-linear-gradient(350deg, (((lighten($colour-primary,8%)), (lighten($colour-secondary,8%))) 65%));
 
 $font-size-primary: 1.5rem;
 $font-size-secondary:1.1rem;

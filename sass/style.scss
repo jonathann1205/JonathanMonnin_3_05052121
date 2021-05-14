@@ -2,7 +2,9 @@
 @import "./Utils/mixins";
 @import "./Base/typographie";
 @import "./Base/form";
+@import "./Layout/chargement";
 @import "./Layout/header";
 @import "./Layout/footer";
-@import "./Pages/acceuil";
 
+@import "./Pages/acceuil";
+@import "./Pages/rLaPaletteDuGout.scss";

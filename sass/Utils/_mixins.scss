@@ -2,6 +2,8 @@
     width:14rem;
     height: 50px;
     display: flex;
+    position: relative;
+    z-index: 1;
     color: $colour-white;
     background-image: linear-gradient(350deg, ($colour-primary, $colour-secondary)65%);
     border-radius: 50px;
@@ -15,22 +17,41 @@
         color: $colour-white;
         text-decoration: none;
     }
-    &:hover{
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        
         background-image: linear-gradient(350deg, (((lighten($colour-primary,8%)), (lighten($colour-secondary,8%))) 65%));
         box-shadow: 3PX 3PX 10px darken($colour-gris,40%);
+        opacity: 0;
+        z-index: -1;
+        border-radius: 20px;
+        transition: opacity 250ms;
+    }
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+        
     }
 
 }
 
 @mixin btn-gris {
-    width:322px;
+    width:300px;
     height: 70px;
     display: flex;
     color:black;
     background-color: $colour-gris;
     border-radius: 20px;
+    position: relative;
     // justify-content: center; 
     align-items: center;
+    z-index: 1;
     box-shadow: 3PX 3PX 5px darken($colour-gris,20%);
     &:link{
         color: inherit;
@@ -39,10 +60,26 @@
     &:visited{
         color:inherit;
     }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color:(lighten($colour-primary,35%)) ;
+        box-shadow: 3PX 3PX 10px darken($colour-gris,40%);
+        opacity: 0;
+        z-index: -1;
+        border-radius: 20px;
+        transition: opacity 250ms;
+    }
   
     &:hover{
-        background:(lighten($colour-primary,35%)) ;
-        box-shadow: 3PX 3PX 10px darken($colour-gris,40%);
+        &::after{
+            opacity: 1;
+        }
+       
     }
  
 }
@@ -119,4 +156,163 @@
         color:inherit;
     }
     
+
+
+}
+@mixin btn-gris-menu {
+    width:300px;
+    height: 60px;
+    display: flex;
+    color:black;
+    background-color: $colour-gris;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    // justify-content: center; 
+    align-items: center;
+    z-index: 1;
+    box-shadow: 3PX 3PX 5px darken($colour-gris,20%);
+    
+    
+    &:link{
+        color: inherit;
+        text-decoration: none;
+    }
+    &:visited{
+        color:inherit;
+    }
+    &::after{
+        content: "";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color:$colour-tertiaire;
+        // box-shadow: 3PX 3PX 10px darken($colour-gris,40%);
+        opacity: 1;
+        z-index: -1;
+        border-top-right-radius: 84px 20px;
+        border-bottom-right-radius:84px 20px ;
+        transform-origin: 100% 50%;
+        transition: opacity 250ms;
+        transform: scaleX(0);
+        transition: 500ms;
+
+    }
+    
+  
+    &:active{
+        
+        &::after{
+            transform: scaleX(0.2);
+        }
+       
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color:(lighten($colour-primary,35%)) ;
+        box-shadow: 3PX 3PX 10px darken($colour-gris,50%);
+        opacity: 0;
+        z-index: -1;
+        border-radius: 20px;
+        transition: opacity 250ms;
+    }
+  
+    &:hover{
+        &::before{
+            opacity: 1;
+        }
+       
+    }
+ 
+}
+
+@mixin effetBtn {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: $marginleft;
+    
+    
+    & h3 {
+        margin: 0px;
+    }
+    & p {
+        margin: 0px;
+    }
+    &--text{
+        
+        padding: 0px;
+        width: 81%;
+        transition: 500ms;
+       
+        
+        & h3{
+            font-weight: 500;
+            font-size: 1rem;
+            white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+        & p{
+            // font-size: 0.82rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-top: 5px;
+
+        }
+    }
+    &--prix{
+      
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 85%;
+        top: 54%;
+        transition: 500ms;
+    }
+    &:active &--prix{
+        
+            left: 68%;
+        
+    }
+    &:active &--text{
+        
+            width: 61%;
+        
+    }
+}
+
+@mixin effetCheck {
+    &--iconCheck{
+        position: absolute;
+        top: 35%;
+        left: 106%;
+        color: $colour-white;
+        font-size: 1.6rem;
+        transition:500ms;
+    }
+}
+
+@mixin text-menu {
+    &--titre{
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    &--sousTitre{
+        font-size: 0.8rem;
+    }
 }

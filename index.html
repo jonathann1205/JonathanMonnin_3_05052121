@@ -10,12 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <title>Oh My Food</title>
+    <title>Oh My Food  </title>
 </head>
 <body>
     <head class="header">
         <div class="header__logo">
-            <img class="header__img" src="/images/logo/ohmyfood.png" alt="logo site oh my food">
+            <!-- <img class="header__img" src="/images/logo/ohmyfood.png" alt="logo site oh my food"> -->
+            <h1>ohmyfood</h1>
         </div>
             <form class="header__form" action="">
                 <input class="header__form--champtext" type="text" placeholder="&#Xf3c5; Paris, Belleville">
@@ -39,115 +40,116 @@
         <div class="blockEtape" >
             <h2 class="blockEtape__titre">Fonctionnement</h2>
             <div class="BlockEtape--btn">
-                <ul>
+                
                     <a  class="blockEtape__btn" href="">
-                        <li>
+                        <div class="blockEtape__btnContainer">
                             <p class="blockEtape__btn1" >1</p>
                             <i class="fas fa-mobile-alt blockEtape__btn--icon1"></i>  
-                            Choisissez un restaurant
-                        </li>
+                            <p> Choisissez un restaurant</p>
+                        </div>
                     </a>
                     <a  class="blockEtape__btn" href="">
-                        <li>
+                        <div class="blockEtape__btnContainer">
                             <p class="blockEtape__btn2" >2</p>
                             <i class="fas fa-list-ul blockEtape__btn--icon2"></i>
-                            Composez votre menu 
-                        </li>
+                            <p> Composez votre menu </p>
+                        </div>
                     </a> 
                     <a  class="blockEtape__btn" href="">       
-                        <li >
+                        <div class="blockEtape__btnContainer">
                             <p class="blockEtape__btn3" >3</p>
                             <i class="fas fa-store blockEtape__btn--icon3"></i>
-                            Dégustez au restaurant
-                        </li>
+                            <p> Dégustez au restaurant </p>
+                        </div>
                     </a>    
-                </ul>
+               
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="resto">
-            <h2>Restaurents</h2>
-            
-            <section class="resto--prev">
-                <a href="">
+        <section class="resto">
+            <h2 id="restaurants">Restaurants</h2>
+            <div class="resto--block">
+                <div class="resto--prev">
+                    <a href="./RLaPaletteDuGout.html">
+                        <div class="resto--prev__image">
+                            <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash880x587.jpg" alt="photo du restaurant La Palette Du Gout">
+                        </div>
+                        <div class="resto--prev__new">
+                            <p>Nouveau</p>
+                        </div>
+                        <div class="resto--prev--text resto--prev--text1">
+                            <h2 class="resto--prev__heading">La palette du goût</h2>
+                            <p class="resto--prev__byline">Ménilmontant</p>
+                        
+                        </div>
+                    </a>
+                    <div class="resto--prev--heart resto--prev--heart1" >
+                        <i class="far fa-heart resto--prev--heart__vide "></i>
+                        <i class="fas fa-heart resto--prev--heart__full "></i>
+                    </div>    
+                </div>
+                
+                
+                <div class="resto--prev">
+                    <a href="./RLaNoteEnchantée.html">
                     <div class="resto--prev__image">
-                        <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash880x587.jpg" alt="photo du restaurant La Palette Du Gout">
+                        <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash880x587.jpg" alt="photo du restaurant La note enchantée">
                     </div>
                     <div class="resto--prev__new">
                         <p>Nouveau</p>
                     </div>
-                    <div class="resto--prev--text resto--prev--text1">
-                        <h2 class="resto--prev__heading">La palette du goût</h2>
-                        <p class="resto--prev__byline">Ménilmontant</p>
+                    <div class="resto--prev--text resto--prev--text2">
+                        <h2 class="resto-prev__heading">La note enchantée</h2>
+                        <p class="resto-prev__byline">Charonne</p>
                     
                     </div>
-                </a>
-                <div class="resto--prev--heart resto--prev--heart1" >
-                    <i class="far fa-heart resto--prev--heart__vide "></i>
-                    <i class="fas fa-heart resto--prev--heart__full "></i>
-                </div>    
-            </section>
-            
-            
-            <section class="resto--prev">
-                <a href="">
-                <div class="resto--prev__image">
-                    <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash880x587.jpg" alt="photo du restaurant La note enchantée">
+                    </a>
+                    <div class="resto--prev--heart resto--prev--heart2" >
+                        <i class="far fa-heart resto--prev--heart__vide "></i>
+                        <i class="fas fa-heart resto--prev--heart__full "></i>
+                    </div>   
                 </div>
-                <div class="resto--prev__new">
-                    <p>Nouveau</p>
-                </div>
-                <div class="resto--prev--text resto--prev--text2">
-                    <h2 class="resto-prev__heading">La note enchantée</h2>
-                    <p class="resto-prev__byline">Charonne</p>
-                   
-                </div>
-                </a>
-                <div class="resto--prev--heart resto--prev--heart2" >
-                    <i class="far fa-heart resto--prev--heart__vide "></i>
-                    <i class="fas fa-heart resto--prev--heart__full "></i>
-                </div>   
-            </section>
-            
-            <section class="resto--prev">
-                <a href="">
-                    <div class="resto--prev__image">
-                        <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash880x587.jpg" alt="photo du restaurant À la française">
-                    </div>
                 
-                    <div class="resto--prev--text">
-                        <h2 class="resto--prev__heading">À la française</h2>
-                        <p class="resto--prev__byline">Cité Rouge</p>
+                <div class="resto--prev">
+                    <a href="./RALaFrançais.html">
+                        <div class="resto--prev__image">
+                            <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash880x587.jpg" alt="photo du restaurant À la française">
+                        </div>
                     
-                    </div>
-                </a> 
-                <div class="resto--prev--heart resto--prev--heart3" >
-                    <i class="far fa-heart  resto--prev--heart__vide "></i>
-                    <i class="fas fa-heart resto--prev--heart__full"></i>
-                </div>      
-            </section>
-            <section class="resto--prev">
-                <a href="">
-                    <div class="resto--prev__image">
-                        <img src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash880x587.jpg" alt="photo du restaurant Le délice des sens">
-                    </div>
-                    <div class="resto--prev--text">
-                        <h2 class="resto--prev__heading">Le délice des sens</h2>
-                        <p class="resto--prev__byline">Folie-Méricourt</p>
-                    
-                    </div>
-                </a>
-                <div class="resto--prev--heart resto--prev--heart4" >
-                    <i class="far fa-heart resto--prev--heart__vide "></i>
-                    <i class="fas fa-heart resto--prev--heart__full"></i>
-                </div>   
-            </section>
-        </div>
+                        <div class="resto--prev--text">
+                            <h2 class="resto--prev__heading">À la française</h2>
+                            <p class="resto--prev__byline">Cité Rouge</p>
+                        
+                        </div>
+                    </a> 
+                    <div class="resto--prev--heart resto--prev--heart3" >
+                        <i class="far fa-heart  resto--prev--heart__vide "></i>
+                        <i class="fas fa-heart resto--prev--heart__full"></i>
+                    </div>      
+                </div>
+                <div class="resto--prev">
+                    <a href="./RLeDéliceDesSens.html">
+                        <div class="resto--prev__image">
+                            <img src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash880x587.jpg" alt="photo du restaurant Le délice des sens">
+                        </div>
+                        <div class="resto--prev--text">
+                            <h2 class="resto--prev__heading">Le délice des sens</h2>
+                            <p class="resto--prev__byline">Folie-Méricourt</p>
+                        
+                        </div>
+                    </a>
+                    <div class="resto--prev--heart resto--prev--heart4" >
+                        <i class="far fa-heart resto--prev--heart__vide "></i>
+                        <i class="fas fa-heart resto--prev--heart__full"></i>
+                    </div>   
+                </div>
+            </div>
+        </section>
     </div>
     <footer>
         <div class="footer">
-            <h1>ohmyfood</h1>
+            <h4>ohmyfood</h4>
             <ul class="footer__text">
                 <li class="footer__text--li"><a class="footer__text--lien" href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
                 <li class="footer__text--li"><a class="footer__text--lien" href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
@@ -156,6 +158,19 @@
             </ul>
         </div>
     </footer>
+        <!-- code pour la page de chargement -->
+        <div class="loading">
+            <p>
+                <span id="lettre1">o</span>
+                <span id="lettre2">h</span>
+                <span id="lettre3">m</span>
+                <span id="lettre4">y</span>
+                <span id="lettre5">f</span>
+                <span id="lettre6">o</span>
+                <span id="lettre7">o</span>
+                <span id="lettre8">d</span>
+            </p>
+        </div>
     <script src="https://kit.fontawesome.com/c29fd46666.js" crossorigin="anonymous"></script>
 </body>
 </html>

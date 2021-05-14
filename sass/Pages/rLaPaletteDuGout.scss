@@ -1,0 +1,275 @@
+.back a{
+    &:visited{
+        color: inherit;
+    }
+    &:link{
+        color:inherit;
+        text-decoration: none;
+    }
+
+}
+.fa-arrow-left{
+    position: absolute;
+    font-size: 2rem;
+    top: 1%;
+    left: 3%;
+  
+}
+
+.containerBanniere{
+    position: relative;
+    height: 151px; 
+    // mettre img ratio
+
+    
+}
+.banniereR{
+    width: 100%;
+    height: 300px;
+    
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    
+    &--img{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        
+    }
+      
+}  
+
+
+
+.containermenu{
+    background-color:lighten($colour-gris,5%) ;
+    border-top-left-radius:50px ;
+    border-top-right-radius:50px;
+    padding-bottom: 50px;
+    & h2{
+        padding-top: 30px;
+        padding-left: 1rem;
+        color: black;
+        font-family: shrikhand;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+}
+
+.menu--block{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+
+}
+
+.entre{
+    display: flex;
+    flex-direction: column;
+    & h3{
+        padding-left: 1rem;
+        margin-bottom: 5px;
+    }
+  
+    &__block{
+        display: flex;
+        flex-flow: column nowrap ;
+        justify-content: space-evenly;
+        align-items: center;  
+    }
+    &__btn{
+        @include btn-gris-menu;
+        @include effetBtn;
+        @include effetCheck;
+        @include text-menu;
+        &:active > .entre__btn--iconCheck {
+            left: 86%;
+            transform: rotate(360deg);
+        }
+    
+            
+    }
+
+    &__btn1{
+        height: 60px;
+        opacity: 0;
+        transform-origin: 50% 0%;
+        animation-name: menuApparition;
+        animation-duration: 500ms;
+        animation-delay: 250ms;
+        animation-fill-mode: forwards;
+    }
+    &__btn2{
+        height: 60px;
+        opacity: 0;
+        transform-origin: 50% 0%;
+        animation-name: menuApparition;
+        animation-duration: 500ms;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+
+    }
+    &__btn3{
+        height: 60px;
+        opacity: 0;
+        transform-origin: 50% 0%;
+        animation-name: menuApparition;
+        animation-duration: 600ms;
+        animation-delay: 750ms;
+        animation-fill-mode: forwards;
+    }
+}
+ @keyframes menuApparition{
+     0%{
+         height: 0px;
+         opacity: 0;
+     }
+     100%{
+         height: 60px;
+         opacity: 1;
+     }
+ }
+
+
+
+.plats{
+    display: flex;
+    flex-direction: column;
+    & h3{
+        padding-left: 1rem;
+        margin-bottom: 5px;
+    }
+  
+    &__block{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    &__btn{
+        @include btn-gris-menu;
+        @include effetBtn;
+        @include effetCheck;
+        @include text-menu;
+    
+        &:active > .plats__btn--iconCheck {
+            left: 86%;
+            transform: rotate(360deg);
+        }
+    
+    
+    }
+    &__btn1{
+        height: 60px;
+        opacity: 0;
+        transform-origin: 50% 0%;
+        animation-name: menuApparition;
+        animation-duration: 500ms;
+        animation-delay: 250ms;
+        animation-fill-mode: forwards;
+    }
+    &__btn2{
+        height: 60px;
+        opacity: 0;
+        transform-origin: 50% 0%;
+        animation-name: menuApparition;
+        animation-duration: 500ms;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+
+    }
+    &__btn3{
+        height: 60px;
+        opacity: 0;
+        transform-origin: 50% 0%;
+        animation-name: menuApparition;
+        animation-duration: 600ms;
+        animation-delay: 750ms;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+.desserts{
+    display: flex;
+    flex-direction: column;
+    & h3{
+        padding-left: 1rem;
+        margin-bottom: 5px;
+    }
+  
+    &__block{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;  
+        align-items: center;
+    }
+    &__btn{
+        @include btn-gris-menu;
+        @include effetBtn;
+        @include effetCheck;
+        @include text-menu;
+    
+            &:active > .desserts__btn--iconCheck {
+                left: 86%;
+                transform: rotate(360deg);
+            }
+    
+    }
+    &__btn1{
+        height: 60px;
+        opacity: 0;
+        transform-origin: 50% 0%;
+        animation-name: menuApparition;
+        animation-duration: 500ms;
+        animation-delay: 250ms;
+        animation-fill-mode: forwards;
+    }
+    &__btn2{
+        height: 60px;
+        opacity: 0;
+        transform-origin: 50% 0%;
+        animation-name: menuApparition;
+        animation-duration: 500ms;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+
+    }
+    &__btn3{
+        height: 60px;
+        opacity: 0;
+        transform-origin: 50% 0%;
+        animation-name: menuApparition;
+        animation-duration: 600ms;
+        animation-delay: 750ms;
+        animation-fill-mode: forwards;
+    }
+}
+
+.resto--prev--heartR{
+    top: -32px;
+    left: 75%;
+}
+
+.commander{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    
+    &__btn{
+        @include btn-pink;
+        
+    }
+}
+
+.lines{
+    width: 50px;
+    height: 3px;
+    background-color: $colour-tertiaire;
+    margin-left: 1rem;
+    margin-bottom: 10px;
+}

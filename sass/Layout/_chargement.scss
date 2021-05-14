@@ -1,0 +1,58 @@
+// body{
+//     background-image:linear-gradient(347deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 85%);
+//     z-index: 5; 
+    
+
+// }
+
+// .container{
+//     opacity: 0;
+// }
+
+// .header__logo {
+//     opacity: 0;
+// }
+// .header__form{
+//     opacity: 0;
+// }
+
+
+// footer{
+//     opacity: 0;
+// }
+
+// .loading{
+//     opacity: 1;
+//     font-family: shrikhand;
+//     font-size: 2rem;
+//     position: fixed;
+//     top: 25%;
+//     width: 100%;
+//     height: 100px;
+//     & p{
+//         position: absolute;
+//         top: 20%;
+//         left: 19%;
+//         margin: 0;
+        
+
+//     }
+
+// }
+
+// #lettre1{
+//     &:hover{
+//         animation-name: lettre1;
+     
+//     }
+// }
+
+// @keyframes lettre1 {
+//     0%{ 
+//         translateY:0 ;
+//     }
+
+//     100%{
+//         translateY: 5px;
+//     }
+// }
