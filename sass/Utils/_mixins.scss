@@ -100,6 +100,7 @@
             position: absolute;
             top: -43px;
             right: 0px;
+            z-index: 1;
             & img{
                 width: 335px;
             }
@@ -111,7 +112,7 @@
     width: 335px;
             height: 77px;
             position: relative;
-            background-color: white;
+            // background-color: white;
             border-bottom-left-radius:20px ;
             border-bottom-right-radius:20px ;
             top: 153px;
@@ -315,5 +316,20 @@
     }
     &--sousTitre{
         font-size: 0.8rem;
+    }
+}
+
+@mixin img-ratio {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
     }
 }

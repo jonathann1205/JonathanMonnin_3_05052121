@@ -201,20 +201,36 @@
     &--prev{
         @include img-resto;
         box-shadow: 3PX 3PX 5px darken($colour-gris,20%);
-        &:hover > a > .resto--prev--text{
-            background:(lighten($colour-primary,35%));
-            box-shadow: 3PX 3PX 10px darken($colour-gris,40%);
-            
+        z-index: 1;
+        &::after{
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: (lighten($colour-primary,35%));
+            box-shadow: 5PX 5PX 10px darken($colour-gris,70%);
+            opacity: 0;
+            z-index: 0;
+            transition: 250ms;
         }
-    
+      
+         &:hover{
+             &::after{
+                 opacity: 1;
+             }
+         }   
         
    
         & a{
             @include suppliens;
+            
   
         }
         &--text{
             @include text-resto;
+            z-index: 1;
           
             
         }

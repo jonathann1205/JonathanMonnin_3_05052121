@@ -399,19 +399,33 @@ h4 {
   position: relative;
   margin-bottom: 20px;
   box-shadow: 3PX 3PX 5px #b7b7b7;
+  z-index: 1;
 }
 .resto--prev__image {
   width: 100%;
   position: absolute;
   top: -43px;
   right: 0px;
+  z-index: 1;
 }
 .resto--prev__image img {
   width: 335px;
 }
-.resto--prev:hover > a > .resto--prev--text {
+.resto--prev::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: #f2eafb;
-  box-shadow: 3PX 3PX 10px #848484;
+  box-shadow: 5PX 5PX 10px #383838;
+  opacity: 0;
+  z-index: 0;
+  transition: 250ms;
+}
+.resto--prev:hover::after {
+  opacity: 1;
 }
 .resto--prev a:link {
   color: inherit;
@@ -424,11 +438,11 @@ h4 {
   width: 335px;
   height: 77px;
   position: relative;
-  background-color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   top: 153px;
   padding-left: 20px;
+  z-index: 1;
   z-index: 1;
 }
 .resto--prev--text h2 {
@@ -517,21 +531,22 @@ h4 {
 
 .containerBanniere {
   position: relative;
-  height: 151px;
+  height: auto;
 }
 
 .banniereR {
   width: 100%;
-  height: 300px;
   display: block;
   overflow: hidden;
-  position: absolute;
+  padding-top: 56.25%;
+  position: relative;
 }
-.banniereR--img {
-  width: 100%;
+.banniereR img {
   position: absolute;
-  top: 0;
-  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .containermenu {
@@ -539,6 +554,8 @@ h4 {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   padding-bottom: 50px;
+  position: relative;
+  top: -78;
 }
 .containermenu h2 {
   padding-top: 30px;

@@ -21,26 +21,25 @@
 
 .containerBanniere{
     position: relative;
-    height: 151px; 
+    height: auto; 
     // mettre img ratio
 
     
 }
 .banniereR{
-    width: 100%;
-    height: 300px;
+    @include img-ratio;
     
-    display: block;
-    overflow: hidden;
-    position: absolute;
+    // display: block;
+    // overflow: hidden;
+    // position: absolute;
     
-    &--img{
-        width: 100%;
-        position: absolute;
-        top: 0;
-        z-index: -1;
+    // &--img{
+    //     width: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     z-index: -1;
         
-    }
+    // }
       
 }  
 
@@ -51,6 +50,8 @@
     border-top-left-radius:50px ;
     border-top-right-radius:50px;
     padding-bottom: 50px;
+    position: relative;
+    top: -78;
     & h2{
         padding-top: 30px;
         padding-left: 1rem;
