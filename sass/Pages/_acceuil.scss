@@ -1,3 +1,5 @@
+
+
 // bannier
 
 .banniere{
@@ -35,7 +37,9 @@
     flex-direction: column;
 
     &__titre{
+        width: 300px;
         margin-bottom: 18px;
+        padding-left: 1%;
     }
 
     &--btn{
@@ -108,11 +112,8 @@
         font-weight: 500;
         margin-top: 1.5em;
         &:hover > div > .blockEtape__btn--icon1 {
-           color: blue;
-           
-            
-
-           
+           color: $colour-primary;
+               
         }
         &:hover > div > .blockEtape__btn--icon2 {
             color:$colour-primary;
@@ -188,6 +189,7 @@
     background-color:lighten($colour-gris,5%) ;
     h2 {
         width: 336px;
+        padding-left: 1%;
     }
     
     &--block{
@@ -199,17 +201,27 @@
     &--prev{
         @include img-resto;
         box-shadow: 3PX 3PX 5px darken($colour-gris,20%);
+        &:hover > a > .resto--prev--text{
+            background:(lighten($colour-primary,35%));
+            box-shadow: 3PX 3PX 10px darken($colour-gris,40%);
+            
+        }
+    
+        
+   
         & a{
             @include suppliens;
+  
         }
         &--text{
             @include text-resto;
+          
             
         }
         &__new{
             @include textnew;
         }
-
+       
         // fichier pour bouger le texte quand on apliqqque le textnew
         &--text1{
             top: 106px;
