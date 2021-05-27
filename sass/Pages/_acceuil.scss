@@ -35,6 +35,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: white;
+    padding-bottom: 50px;
+    margin-bottom: -20px;
 
     &__titre{
         width: 300px;
@@ -46,7 +49,7 @@
         display: flex;
         justify-content:space-evenly;
         flex-flow: row wrap;
-
+        
      
       
     }
@@ -188,7 +191,7 @@
     padding-bottom: 20px;
     background-color:lighten($colour-gris,5%) ;
     h2 {
-        width: 336px;
+        width: 237px;
         padding-left: 1%;
     }
     
@@ -219,7 +222,9 @@
          &:hover{
              &::after{
                  opacity: 1;
+                 
              }
+             box-shadow: 5PX 5PX 10px darken($colour-gris,50%);
          }   
         
    
@@ -249,7 +254,7 @@
             position: relative;
             width: 60px;
             top: 96px;
-            left:250px ;
+            left:75% ;
             z-index: 2;
             font-size: 1.9rem;
           &__full{

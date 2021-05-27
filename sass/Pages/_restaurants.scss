@@ -22,39 +22,32 @@
 .containerBanniere{
     position: relative;
     height: auto; 
-    // mettre img ratio
+
 
     
 }
 .banniereR{
     @include img-ratio;
-   
-    // display: block;
-    // overflow: hidden;
-    // position: absolute;
-    
-    // &--img{
-    //     width: 100%;
-    //     position: absolute;
-    //     top: 0;
-    //     z-index: -1;
-        
-    // }
+    @media (min-width:665px) {
+        padding-top:36.25% ;
+    }
+  
       
 }  
 
 
 
-.containermenu{
+.containerMenu{
     background-color:lighten($colour-gris,5%) ;
     border-top-left-radius:50px ;
     border-top-right-radius:50px;
     padding-bottom: 50px;
     position: relative;
-    top: -78;
+    top: -78px;
+    margin-bottom: -78px;
     & h2{
         padding-top: 30px;
-        padding-left: 1rem;
+        padding-left: 5%;
         color: black;
         font-family: shrikhand;
         font-size: 1.5rem;
@@ -72,23 +65,30 @@
 .entre{
     display: flex;
     flex-direction: column;
+    @media (max-width:340px) {
+        width: 100%;
+    }
     & h3{
         padding-left: 1rem;
         margin-bottom: 5px;
     }
   
     &__block{
+        width: 100%;
         display: flex;
         flex-flow: column nowrap ;
         justify-content: space-evenly;
-        align-items: center;  
+        align-items: center;
+        @media (max-width:340px) {
+            flex-flow: row wrap;
+        }  
     }
     &__btn{
         @include btn-gris-menu;
         @include effetBtn;
         @include effetCheck;
         @include text-menu;
-        &:active > .entre__btn--iconCheck {
+        &:hover > .entre__btn--iconCheck {
             left: 86%;
             transform: rotate(360deg);
         }
@@ -102,7 +102,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 250ms;
+        animation-delay: 1.8s;
         animation-fill-mode: forwards;
     }
     &__btn2{
@@ -111,7 +111,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 500ms;
+        animation-delay: 2s;
         animation-fill-mode: forwards;
 
     }
@@ -121,7 +121,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 600ms;
-        animation-delay: 750ms;
+        animation-delay: 2.2s;
         animation-fill-mode: forwards;
     }
 }
@@ -141,16 +141,23 @@
 .plats{
     display: flex;
     flex-direction: column;
+    @media (max-width:340px) {
+        width: 100%;
+    }
     & h3{
         padding-left: 1rem;
         margin-bottom: 5px;
     }
   
     &__block{
+        width: 100%;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
         align-items: center;
+        @media (max-width:340px) {
+            flex-flow: row wrap;
+        }  
     }
     &__btn{
         @include btn-gris-menu;
@@ -158,7 +165,7 @@
         @include effetCheck;
         @include text-menu;
     
-        &:active > .plats__btn--iconCheck {
+        &:hover > .plats__btn--iconCheck {
             left: 86%;
             transform: rotate(360deg);
         }
@@ -171,7 +178,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 250ms;
+        animation-delay: 1.8s;
         animation-fill-mode: forwards;
     }
     &__btn2{
@@ -180,7 +187,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 500ms;
+        animation-delay: 2s;
         animation-fill-mode: forwards;
 
     }
@@ -190,7 +197,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 600ms;
-        animation-delay: 750ms;
+        animation-delay: 2.2s;
         animation-fill-mode: forwards;
     }
 }
@@ -199,16 +206,23 @@
 .desserts{
     display: flex;
     flex-direction: column;
+    @media (max-width:340px) {
+        width: 100%;
+    }
     & h3{
         padding-left: 1rem;
         margin-bottom: 5px;
     }
   
     &__block{
+        width: 100%;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;  
         align-items: center;
+        @media (max-width:340px) {
+            flex-flow: row wrap;
+        }  
     }
     &__btn{
         @include btn-gris-menu;
@@ -216,7 +230,7 @@
         @include effetCheck;
         @include text-menu;
     
-            &:active > .desserts__btn--iconCheck {
+            &:hover > .desserts__btn--iconCheck {
                 left: 86%;
                 transform: rotate(360deg);
             }
@@ -228,7 +242,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 250ms;
+        animation-delay: 1.8s;
         animation-fill-mode: forwards;
     }
     &__btn2{
@@ -237,7 +251,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 500ms;
+        animation-delay: 2s;
         animation-fill-mode: forwards;
 
     }
@@ -247,14 +261,15 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 600ms;
-        animation-delay: 750ms;
+        animation-delay: 2.2s;
         animation-fill-mode: forwards;
     }
 }
 
 .resto--prev--heartR{
     top: -32px;
-    left: 75%;
+    left: 80%;
+    
 }
 
 .commander{
@@ -277,3 +292,4 @@
     margin-left: 1rem;
     margin-bottom: 10px;
 }
+

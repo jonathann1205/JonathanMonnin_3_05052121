@@ -109,7 +109,7 @@
 }
 
 @mixin text-resto {
-    width: 335px;
+    width: 250px;
             height: 77px;
             position: relative;
             // background-color: white;
@@ -141,7 +141,8 @@
             color: darken($colour-tertiaire,50%);
             font-size: $font-size-secondary;
             background-color: $colour-tertiaire;
-            left: 245px;
+            left:70%;
+            z-index: 5;
             & p{
                 padding-top: 3px;
                 margin-bottom: 0px;
@@ -207,7 +208,7 @@
     }
     
   
-    &:active{
+    &:hover{
         
         &::after{
             transform: scaleX(0.2);
@@ -286,12 +287,12 @@
         top: 54%;
         transition: 500ms;
     }
-    &:active &--prix{
+    &:hover &--prix{
         
             left: 68%;
         
     }
-    &:active &--text{
+    &:hover &--text{
         
             width: 61%;
         
@@ -330,6 +331,6 @@
         top: 50%;
         left: 50%;
         width: 100%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -60%);
     }
 }

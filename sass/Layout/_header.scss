@@ -7,6 +7,7 @@
         justify-content: center;
         align-items: center;
         display: flex;
+        background-color: white;
         
         
         & img{
@@ -16,7 +17,13 @@
             
         }
     }
-    .header__form--champtext{
-        font-family:FontAwesome ,roboto;
-    }    
+    .header__form{
+        width: 100%;
+        overflow: hidden;
+        &--champtext{
+            width: 100%;
+            font-family:FontAwesome ,roboto;
+        } 
+    }
+     
    

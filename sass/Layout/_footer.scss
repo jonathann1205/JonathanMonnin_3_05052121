@@ -13,15 +13,24 @@ footer{
  }
 .footer{
     padding-left: 23px;
+    display: flex;
+    flex-direction: column;
+    
     &__text {
         color: white;
+        width: 100%;
         list-style-type: none;
         display: flex;
+
         flex-direction: column;
         padding-left: 0px;
         margin: 0;
+
         &--li{
             margin-bottom: 10px;  
+            display: flex;
+            text-align: start;
+            align-items: flex-start;
         }
         &--lien{
             

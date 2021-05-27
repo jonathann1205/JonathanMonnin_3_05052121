@@ -54,6 +54,7 @@ p {
   font-family: shrikhand;
   font-size: 2.5rem;
   animation: pulse 1.2s linear infinite;
+  opacity: 1;
 }
 
 @keyframes pulse {
@@ -106,9 +107,50 @@ p {
   0% {
     opacity: 1;
   }
+  80% {
+    opacity: 0;
+    z-index: -9999;
+  }
   100% {
     opacity: 0;
     z-index: -9999;
+  }
+}
+.loadingSpinner {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadingSpinner:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: rotSpinner 1.2s linear infinite;
+}
+
+@keyframes rotSpinner {
+  0% {
+    transform: rotate(0deg);
+    filter: drop-shadow(0px 0px 0px white);
+  }
+  30% {
+    filter: drop-shadow(0px 0px 5px white);
+  }
+  60% {
+    filter: drop-shadow(0px 0px 0px white);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: drop-shadow(0px 0px 5px white);
   }
 }
 .header__logo {
@@ -117,13 +159,19 @@ p {
   justify-content: center;
   align-items: center;
   display: flex;
+  background-color: white;
 }
 .header__logo img {
   width: 8rem;
   height: auto;
 }
 
+.header__form {
+  width: 100%;
+  overflow: hidden;
+}
 .header__form--champtext {
+  width: 100%;
   font-family: FontAwesome, roboto;
 }
 
@@ -143,9 +191,12 @@ h4 {
 
 .footer {
   padding-left: 23px;
+  display: flex;
+  flex-direction: column;
 }
 .footer__text {
   color: white;
+  width: 100%;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -154,6 +205,9 @@ h4 {
 }
 .footer__text--li {
   margin-bottom: 10px;
+  display: flex;
+  text-align: start;
+  align-items: flex-start;
 }
 .footer__text--lien:link {
   color: inherit;
@@ -233,6 +287,9 @@ h4 {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  padding-bottom: 50px;
+  margin-bottom: -20px;
 }
 .blockEtape__titre {
   width: 300px;
@@ -383,7 +440,7 @@ h4 {
   background-color: #f7f7f7;
 }
 .resto h2 {
-  width: 336px;
+  width: 237px;
   padding-left: 1%;
 }
 .resto--block {
@@ -425,6 +482,9 @@ h4 {
   z-index: 0;
   transition: 250ms;
 }
+.resto--prev:hover {
+  box-shadow: 5PX 5PX 10px #6b6b6b;
+}
 .resto--prev:hover::after {
   opacity: 1;
 }
@@ -436,7 +496,7 @@ h4 {
   color: inherit;
 }
 .resto--prev--text {
-  width: 335px;
+  width: 250px;
   height: 77px;
   position: relative;
   border-bottom-left-radius: 20px;
@@ -464,7 +524,8 @@ h4 {
   color: #1b6150;
   font-size: 1.1rem;
   background-color: #99E2D0;
-  left: 245px;
+  left: 70%;
+  z-index: 5;
 }
 .resto--prev__new p {
   padding-top: 3px;
@@ -480,7 +541,7 @@ h4 {
   position: relative;
   width: 60px;
   top: 96px;
-  left: 250px;
+  left: 75%;
   z-index: 2;
   font-size: 1.9rem;
 }
@@ -547,20 +608,26 @@ h4 {
   top: 50%;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
+}
+@media (min-width: 665px) {
+  .banniereR {
+    padding-top: 36.25%;
+  }
 }
 
-.containermenu {
+.containerMenu {
   background-color: #f7f7f7;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   padding-bottom: 50px;
   position: relative;
-  top: -78;
+  top: -78px;
+  margin-bottom: -78px;
 }
-.containermenu h2 {
+.containerMenu h2 {
   padding-top: 30px;
-  padding-left: 1rem;
+  padding-left: 5%;
   color: black;
   font-family: shrikhand;
   font-size: 1.5rem;
@@ -577,15 +644,26 @@ h4 {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 340px) {
+  .entre {
+    width: 100%;
+  }
+}
 .entre h3 {
   padding-left: 1rem;
   margin-bottom: 5px;
 }
 .entre__block {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
+}
+@media (max-width: 340px) {
+  .entre__block {
+    flex-flow: row wrap;
+  }
 }
 .entre__btn {
   width: 300px;
@@ -634,7 +712,7 @@ h4 {
   transform: scaleX(0);
   transition: 500ms;
 }
-.entre__btn:active::after {
+.entre__btn:hover::after {
   transform: scaleX(0.2);
 }
 .entre__btn::before {
@@ -686,10 +764,10 @@ h4 {
   top: 54%;
   transition: 500ms;
 }
-.entre__btn:active .entre__btn--prix {
+.entre__btn:hover .entre__btn--prix {
   left: 68%;
 }
-.entre__btn:active .entre__btn--text {
+.entre__btn:hover .entre__btn--text {
   width: 61%;
 }
 .entre__btn--iconCheck {
@@ -707,7 +785,7 @@ h4 {
 .entre__btn--sousTitre {
   font-size: 0.8rem;
 }
-.entre__btn:active > .entre__btn--iconCheck {
+.entre__btn:hover > .entre__btn--iconCheck {
   left: 86%;
   transform: rotate(360deg);
 }
@@ -717,7 +795,7 @@ h4 {
   transform-origin: 50% 0%;
   animation-name: menuApparition;
   animation-duration: 500ms;
-  animation-delay: 250ms;
+  animation-delay: 1.8s;
   animation-fill-mode: forwards;
 }
 .entre__btn2 {
@@ -726,7 +804,7 @@ h4 {
   transform-origin: 50% 0%;
   animation-name: menuApparition;
   animation-duration: 500ms;
-  animation-delay: 500ms;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 .entre__btn3 {
@@ -735,7 +813,7 @@ h4 {
   transform-origin: 50% 0%;
   animation-name: menuApparition;
   animation-duration: 600ms;
-  animation-delay: 750ms;
+  animation-delay: 2.2s;
   animation-fill-mode: forwards;
 }
 
@@ -753,15 +831,26 @@ h4 {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 340px) {
+  .plats {
+    width: 100%;
+  }
+}
 .plats h3 {
   padding-left: 1rem;
   margin-bottom: 5px;
 }
 .plats__block {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
+}
+@media (max-width: 340px) {
+  .plats__block {
+    flex-flow: row wrap;
+  }
 }
 .plats__btn {
   width: 300px;
@@ -810,7 +899,7 @@ h4 {
   transform: scaleX(0);
   transition: 500ms;
 }
-.plats__btn:active::after {
+.plats__btn:hover::after {
   transform: scaleX(0.2);
 }
 .plats__btn::before {
@@ -862,10 +951,10 @@ h4 {
   top: 54%;
   transition: 500ms;
 }
-.plats__btn:active .plats__btn--prix {
+.plats__btn:hover .plats__btn--prix {
   left: 68%;
 }
-.plats__btn:active .plats__btn--text {
+.plats__btn:hover .plats__btn--text {
   width: 61%;
 }
 .plats__btn--iconCheck {
@@ -883,7 +972,7 @@ h4 {
 .plats__btn--sousTitre {
   font-size: 0.8rem;
 }
-.plats__btn:active > .plats__btn--iconCheck {
+.plats__btn:hover > .plats__btn--iconCheck {
   left: 86%;
   transform: rotate(360deg);
 }
@@ -893,7 +982,7 @@ h4 {
   transform-origin: 50% 0%;
   animation-name: menuApparition;
   animation-duration: 500ms;
-  animation-delay: 250ms;
+  animation-delay: 1.8s;
   animation-fill-mode: forwards;
 }
 .plats__btn2 {
@@ -902,7 +991,7 @@ h4 {
   transform-origin: 50% 0%;
   animation-name: menuApparition;
   animation-duration: 500ms;
-  animation-delay: 500ms;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 .plats__btn3 {
@@ -911,7 +1000,7 @@ h4 {
   transform-origin: 50% 0%;
   animation-name: menuApparition;
   animation-duration: 600ms;
-  animation-delay: 750ms;
+  animation-delay: 2.2s;
   animation-fill-mode: forwards;
 }
 
@@ -919,15 +1008,26 @@ h4 {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 340px) {
+  .desserts {
+    width: 100%;
+  }
+}
 .desserts h3 {
   padding-left: 1rem;
   margin-bottom: 5px;
 }
 .desserts__block {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
+}
+@media (max-width: 340px) {
+  .desserts__block {
+    flex-flow: row wrap;
+  }
 }
 .desserts__btn {
   width: 300px;
@@ -976,7 +1076,7 @@ h4 {
   transform: scaleX(0);
   transition: 500ms;
 }
-.desserts__btn:active::after {
+.desserts__btn:hover::after {
   transform: scaleX(0.2);
 }
 .desserts__btn::before {
@@ -1028,10 +1128,10 @@ h4 {
   top: 54%;
   transition: 500ms;
 }
-.desserts__btn:active .desserts__btn--prix {
+.desserts__btn:hover .desserts__btn--prix {
   left: 68%;
 }
-.desserts__btn:active .desserts__btn--text {
+.desserts__btn:hover .desserts__btn--text {
   width: 61%;
 }
 .desserts__btn--iconCheck {
@@ -1049,7 +1149,7 @@ h4 {
 .desserts__btn--sousTitre {
   font-size: 0.8rem;
 }
-.desserts__btn:active > .desserts__btn--iconCheck {
+.desserts__btn:hover > .desserts__btn--iconCheck {
   left: 86%;
   transform: rotate(360deg);
 }
@@ -1059,7 +1159,7 @@ h4 {
   transform-origin: 50% 0%;
   animation-name: menuApparition;
   animation-duration: 500ms;
-  animation-delay: 250ms;
+  animation-delay: 1.8s;
   animation-fill-mode: forwards;
 }
 .desserts__btn2 {
@@ -1068,7 +1168,7 @@ h4 {
   transform-origin: 50% 0%;
   animation-name: menuApparition;
   animation-duration: 500ms;
-  animation-delay: 500ms;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 .desserts__btn3 {
@@ -1077,13 +1177,13 @@ h4 {
   transform-origin: 50% 0%;
   animation-name: menuApparition;
   animation-duration: 600ms;
-  animation-delay: 750ms;
+  animation-delay: 2.2s;
   animation-fill-mode: forwards;
 }
 
 .resto--prev--heartR {
   top: -32px;
-  left: 75%;
+  left: 80%;
 }
 
 .commander {
