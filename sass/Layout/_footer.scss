@@ -2,15 +2,15 @@ footer{
     background-color: #353535;
     width: 100%;
     height: auto;
-    
+    p{
+        color: white;
+        font-family: shrikhand;
+        font-size: 1.5rem;
+        padding-top: 20px;
+        margin-top: 0px;
+    }
 }
- h4{
-     color: white;
-     font-family: shrikhand;
-     font-size: 1.5rem;
-     padding-top: 20px;
-     margin-top: 0px;
- }
+
 .footer{
     padding-left: 23px;
     display: flex;
