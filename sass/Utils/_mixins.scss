@@ -184,37 +184,7 @@
     &:visited{
         color:inherit;
     }
-    &::after{
-        content: "";
-        font-weight: normal;
-        font-style: normal;
-        font-size: 2rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color:$colour-tertiaire;
-        // box-shadow: 3PX 3PX 10px darken($colour-gris,40%);
-        opacity: 1;
-        z-index: -1;
-        border-top-right-radius: 84px 20px;
-        border-bottom-right-radius:84px 20px ;
-        transform-origin: 100% 50%;
-        transition: opacity 250ms;
-        transform: scaleX(0);
-        transition: 500ms;
-
-    }
-    
-  
-    &:hover{
-        
-        &::after{
-            transform: scaleX(0.2);
-        }
-       
-    }
+   
     &::before{
         content: "";
         position: absolute;
@@ -270,7 +240,7 @@
         text-overflow: ellipsis;
         }
         & p{
-            // font-size: 0.82rem;
+            
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -279,34 +249,49 @@
         }
     }
     &--prix{
-      
+    
         position: absolute;
         width: 25px;
         height: 25px;
         left: 85%;
         top: 54%;
         transition: 500ms;
-    }
-    &:hover &--prix{
-        
-            left: 68%;
+
         
     }
-    &:hover &--text{
+    //   animation move left block prix et text
+    & input:checked ~ &--prix {
+   
+        left: 68%;   
+    }
+    & input:checked ~ &--text{
         
             width: 61%;
         
     }
 }
 
+
+
 @mixin effetCheck {
     &--iconCheck{
+        display: flex;
         position: absolute;
-        top: 35%;
+        top: 0%;
         left: 106%;
         color: $colour-white;
         font-size: 1.6rem;
         transition:500ms;
+        background-color: $colour-tertiaire;
+        align-items: center;
+        justify-content: center;
+        width:20% ;
+        height: 75px;
+    }
+    .fa-check-circle{
+        
+        transition: 500ms;
+        rotate: (0deg);
     }
 }
 

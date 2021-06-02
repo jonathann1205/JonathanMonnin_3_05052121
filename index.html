@@ -32,9 +32,10 @@
                 
                <!-- header -->
     <header >
-        <div class="header__logo">
-        
-            <h1>ohmyfood</h1>
+        <div class="header__logo" id="acceuil">
+            <a href="#acceuil">
+                <h1>ohmyfood</h1>
+            </a>
         </div>
             <form class="header__form" action="#">
                 <input class="header__form--champtext" type="text" placeholder="&#Xf3c5;    Paris, Belleville">
@@ -106,10 +107,11 @@
                         
                         </div>
                     </a>
-                    <div class="resto--prev--heart resto--prev--heart1" >
+                    <label class="resto--prev--heart resto--prev--heart1" for="checkHeart" >
+                        <input type="checkbox" id="checkHeart" name="heart">
                         <i class="far fa-heart resto--prev--heart__vide "></i>
                         <i class="fas fa-heart resto--prev--heart__full "></i>
-                    </div>    
+                    </label>    
                 </div>
                 
                 
@@ -127,10 +129,11 @@
                     
                     </div>
                     </a>
-                    <div class="resto--prev--heart resto--prev--heart2" >
+                    <label class="resto--prev--heart resto--prev--heart2" for="checkHeart2">
+                        <input type="checkbox" id="checkHeart2" name="heart">
                         <i class="far fa-heart resto--prev--heart__vide "></i>
                         <i class="fas fa-heart resto--prev--heart__full "></i>
-                    </div>   
+                    </label>   
                 </div>
                 
                 <div class="resto--prev">
@@ -145,10 +148,11 @@
                         
                         </div>
                     </a> 
-                    <div class="resto--prev--heart resto--prev--heart3" >
+                    <label class="resto--prev--heart resto--prev--heart3" for="checkHeart3">
+                        <input type="checkbox" id="checkHeart3" name="heart">
                         <i class="far fa-heart  resto--prev--heart__vide "></i>
                         <i class="fas fa-heart resto--prev--heart__full"></i>
-                    </div>      
+                    </label>      
                 </div>
                 <div class="resto--prev">
                     <a href="./RLeDéliceDesSens.html">
@@ -161,10 +165,11 @@
                         
                         </div>
                     </a>
-                    <div class="resto--prev--heart resto--prev--heart4" >
+                    <label class="resto--prev--heart resto--prev--heart4" for="checkHeart4">
+                        <input type="checkbox" id="checkHeart4" name="heart">
                         <i class="far fa-heart resto--prev--heart__vide "></i>
                         <i class="fas fa-heart resto--prev--heart__full"></i>
-                    </div>   
+                    </label>   
                 </div>
             </div>
         </section>
@@ -173,7 +178,7 @@
     <!-- footer -->
     <footer>
         <div class="footer">
-            <p>ohmyfood</p>
+            <a href="#acceuil"><p>ohmyfood</p></a>
             <ul class="footer__text">
                 <li class="footer__text--li"><a class="footer__text--lien" href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
                 <li class="footer__text--li"><a class="footer__text--lien" href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>

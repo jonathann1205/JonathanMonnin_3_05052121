@@ -252,6 +252,7 @@
         }
         &--heart{
             position: relative;
+            overflow: hidden;
             width: 60px;
             top: 96px;
             left:75% ;
@@ -259,6 +260,8 @@
             font-size: 1.9rem;
           &__full{
                 position: absolute;
+                top: 0%;
+                left: 80%;
                 background:$colour-degrade;
                 -webkit-background-clip : text;
                 -webkit-text-fill-color : transparent;
@@ -266,24 +269,35 @@
                 transition: 500ms cubic-bezier(.32,0,.07,1);
                 transform: scale(0);
                 transform-origin:50% 100% ;
-               
-
+                
             }
             &__vide{
                 position: relative;
+                
                 color:darken($colour-gris,20%);
                 left: 30px;
                 opacity: 1;
                 z-index: 2;
                 transition: 250ms;
-                &:hover{
-                    opacity: 0;
-                }
-                &:hover + .resto--prev--heart__full  {
-                    transform: scale(1);
-                }
+                
+                // &:not(:active){
+                //     opacity: 0;
+                // }
+                // &:not(:active) + .resto--prev--heart__full  {
+                //     transform: scale(1);
+                //     top: 0%;
+                // }
             }
-            
+            & input{
+                display: none;
+             
+            }
+            & input:checked ~ &__full{
+                transform: scale(1);
+            }
+            & input:checked ~ &__vide{
+                opacity: 0;
+            }
         } 
         &--heart1 {
             top: 49px;

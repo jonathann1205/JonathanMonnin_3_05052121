@@ -8,8 +8,15 @@
         align-items: center;
         display: flex;
         background-color: white;
-        
-        
+        & a{
+            &:link{
+                color: inherit;
+                text-decoration: none;
+            }
+            &:visited{
+                color:inherit;
+            }
+        }
         & img{
             width: 8rem;
             height: auto;

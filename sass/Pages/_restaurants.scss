@@ -88,11 +88,17 @@
         @include effetBtn;
         @include effetCheck;
         @include text-menu;
-        &:hover > .entre__btn--iconCheck {
-            left: 86%;
+        & input {
+            display: none;
+        }
+        & input:checked ~ .entre__btn--iconCheck {
+            left: 81%;
+            
+        }
+        & input:checked ~ .entre__btn--iconCheck >i {
             transform: rotate(360deg);
         }
-    
+   
             
     }
 
@@ -102,18 +108,24 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 1.8s;
+        animation-delay: 0s;
         animation-fill-mode: forwards;
+
+
+     
     }
+  
     &__btn2{
         height: 60px;
         opacity: 0;
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 2s;
+        animation-delay: 200ms;
         animation-fill-mode: forwards;
-
+        
+ 
+ 
     }
     &__btn3{
         height: 60px;
@@ -121,7 +133,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 600ms;
-        animation-delay: 2.2s;
+        animation-delay: 400ms;
         animation-fill-mode: forwards;
     }
 }
@@ -135,7 +147,6 @@
          opacity: 1;
      }
  }
-
 
 
 .plats{
@@ -164,11 +175,18 @@
         @include effetBtn;
         @include effetCheck;
         @include text-menu;
-    
-        &:hover > .plats__btn--iconCheck {
-            left: 86%;
+        & input {
+            display: none;
+        }
+        & input:checked ~ .plats__btn--iconCheck {
+            left: 81%;
+            
+        }
+        & input:checked ~ .plats__btn--iconCheck >i {
             transform: rotate(360deg);
         }
+    
+      
     
     
     }
@@ -178,7 +196,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 1.8s;
+        animation-delay: 0s;
         animation-fill-mode: forwards;
     }
     &__btn2{
@@ -187,7 +205,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 2s;
+        animation-delay: 200ms;
         animation-fill-mode: forwards;
 
     }
@@ -197,7 +215,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 600ms;
-        animation-delay: 2.2s;
+        animation-delay: 400ms;
         animation-fill-mode: forwards;
     }
 }
@@ -229,11 +247,16 @@
         @include effetBtn;
         @include effetCheck;
         @include text-menu;
-    
-            &:hover > .desserts__btn--iconCheck {
-                left: 86%;
-                transform: rotate(360deg);
-            }
+        & input {
+            display: none;
+        }
+        & input:checked ~ .desserts__btn--iconCheck {
+            left: 81%;
+            
+        }
+        & input:checked ~ .desserts__btn--iconCheck >i {
+            transform: rotate(360deg);
+        }
     
     }
     &__btn1{
@@ -242,7 +265,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 1.8s;
+        animation-delay: 0s;
         animation-fill-mode: forwards;
     }
     &__btn2{
@@ -251,7 +274,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 500ms;
-        animation-delay: 2s;
+        animation-delay: 200ms;
         animation-fill-mode: forwards;
 
     }
@@ -261,7 +284,7 @@
         transform-origin: 50% 0%;
         animation-name: menuApparition;
         animation-duration: 600ms;
-        animation-delay: 2.2s;
+        animation-delay: 400ms;
         animation-fill-mode: forwards;
     }
 }

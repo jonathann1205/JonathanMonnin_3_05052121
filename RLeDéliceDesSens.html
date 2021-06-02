@@ -14,25 +14,14 @@
     <title>Oh My Food restaurant Le délice des sens</title>
 </head>
 <body>
-                    <!-- code pour la page de chargement -->
-                    <div class="loading">
-                        <p>
-                            <span class="lettre" id="lettre1">o</span>
-                            <span class="lettre" id="lettre2">h</span>
-                            <span class="lettre" id="lettre3">m</span>
-                            <span class="lettre" id="lettre4">y</span>
-                            <span class="lettre" id="lettre5">f</span>
-                            <span class="lettre" id="lettre6">o</span>
-                            <span class="lettre" id="lettre7">o</span>
-                            <span class="lettre" id="lettre8">d</span>
-                        </p>
-                        <div class="loadingSpinner"></div>
-                    </div>
+
                     <!-- header -->
     <header >
         <div class="header__logo">
             <div class="back"><a href="./index.html"><i class="fas fa-arrow-left"></i></a></div>
-            <h1>ohmyfood</h1>
+            <a href="./index.html">
+                <h1>ohmyfood</h1>
+            </a>
         </div>
            
         
@@ -50,16 +39,18 @@
     <div class="containerMenu">
         <h2>Le délice des sens</h2>
         
-        <div class="resto--prev--heart resto--prev--heartR" >
+        <label class="resto--prev--heart resto--prev--heartR" for="checkHeartR" >
+            <input type="checkbox" id="checkHeartR" name="heart">
             <i class="far fa-heart resto--prev--heart__vide "></i>
             <i class="fas fa-heart resto--prev--heart__full "></i>
-        </div> 
+        </label> 
         <div class="menu--block">   
             <div class="entre">
                 <h3>ENTRÉES</h3>
                 <div class="lines"></div>
                 <div class="entre__block">
-                    <div class="entre__btn entre__btn1" >
+                    <label class="entre__btn entre__btn1" for="entre1" >
+                        <input id="entre1" type="radio" name="entre" value="1">
                         <div class="entre__btn--text">
                             <p class="entre__btn--titre">Tartare de thon</p>
                             <p class="entre__btn--sousTitre">Assaisonné au yuzu</p>
@@ -70,8 +61,9 @@
                         </div>
                         <div class="entre__btn--iconCheck"><i class="far fa-check-circle"></i></div>
                         
-                    </div>
-                    <div class="entre__btn entre__btn2">
+                    </label>
+                    <label class="entre__btn entre__btn2" for="entre2">
+                        <input id="entre2" type="radio" name="entre" value="2">
                         <div class="entre__btn--text">
                             <p class="entre__btn--titre">Bouchée de homard croustillant </p>
                             <p class="entre__btn--sousTitre">Et sa farandole de petits légumes</p>
@@ -82,8 +74,9 @@
                         </div>
                         <div class="entre__btn--iconCheck"><i class="far fa-check-circle"></i></div>
                     
-                    </div>
-                    <div class="entre__btn entre__btn3">
+                    </label>
+                    <label class="entre__btn entre__btn3" for="entre3">
+                        <input id="entre3" type="radio" name="entre" value="3">
                         <div class="entre__btn--text">
                             <p class="entre__btn--titre">Velouté de cèpes</p>
                             <p class="entre__btn--sousTitre">Aux truffes</p>
@@ -94,7 +87,7 @@
                         </div>
                         <div class="entre__btn--iconCheck"><i class="far fa-check-circle"></i></div>
                         
-                    </div>
+                    </label>
                 </div>
             </div>
 
@@ -102,7 +95,8 @@
                 <h3>PLATS</h3>
                 <div class="lines"></div>
                 <div class="plats__block">
-                    <div class="plats__btn plats__btn1">
+                    <label class="plats__btn plats__btn1" for="plats1">
+                        <input id="plats1" type="radio" name="plats" value="1">
                         <div class="plats__btn--text">
                             <p class="plats__btn--titre">Poulet rôti aux herbes de Provence</p>
                             <p class="plats__btn--sousTitre">Et sa crème de truffe</p>
@@ -113,8 +107,9 @@
                         </div>
                         <div class="plats__btn--iconCheck"><i class="far fa-check-circle"></i></div>
                         
-                    </div>
-                    <div class="plats__btn plats__btn2">
+                    </label>
+                    <label class="plats__btn plats__btn2" for="plats2">
+                        <input id="plats2" type="radio" name="plats" value="2">
                         <div class="plats__btn--text">
                             <p class="plats__btn--titre">Langouste rôtie</p>
                             <p class="plats__btn--sousTitre">Et ses légumes de saison</p>
@@ -125,8 +120,9 @@
                         </div>
                         <div class="plats__btn--iconCheck"><i class="far fa-check-circle"></i></div>
                         
-                    </div>
-                    <div class="plats__btn plats__btn3">
+                    </label>
+                    <label class="plats__btn plats__btn3" for="plats3">
+                        <input id="plats3" type="radio" name="plats" value="3">
                         <div class="plats__btn--text">
                             <p class="plats__btn--titre">Côte de boeuf Angus</p>
                             <p class="plats__btn--sousTitre">Et sa purée de panais</p>
@@ -137,7 +133,7 @@
                         </div>
                         <div class="plats__btn--iconCheck"><i class="far fa-check-circle"></i></div>
                     
-                    </div>
+                    </label>
                 </div>
             </div>
 
@@ -145,7 +141,8 @@
                 <h3>DESSERTS</h3>
                 <div class="lines"></div>
                 <div class="desserts__block">
-                    <div class="desserts__btn desserts__btn1">
+                    <label class="desserts__btn desserts__btn1" for="desserts1">
+                        <input id="desserts1" type="radio" name="desserts" value="1">
                         <div class="desserts__btn--text">
                             <p class="desserts__btn--titre">Farandole de desserts</p>
                             <p class="desserts__btn--sousTitre">Du chef</p>
@@ -156,8 +153,9 @@
                         </div>
                         <div class="desserts__btn--iconCheck"><i class="far fa-check-circle"></i></div>
                     
-                    </div>
-                    <div class="desserts__btn desserts__btn2">
+                    </label>
+                    <label class="desserts__btn desserts__btn2" for="desserts2">
+                        <input id="desserts2" type="radio" name="desserts" value="2">
                         <div class="desserts__btn--text">
                             <p class="desserts__btn--titre">Crème brulée</p>
                             <p class="desserts__btn--sousTitre">Revisitée</p>
@@ -168,8 +166,9 @@
                         </div>
                         <div class="desserts__btn--iconCheck"><i class="far fa-check-circle"></i></div>
                         
-                    </div>
-                    <div class="desserts__btn desserts__btn3">
+                    </label>
+                    <label class="desserts__btn desserts__btn3" for="desserts3">
+                        <input id="desserts3" type="radio" name="desserts" value="3">
                         <div class="desserts__btn--text">
                             <p class="desserts__btn--titre">Tiramisu</p>
                             <p class="desserts__btn--sousTitre">À la noisette</p>
@@ -180,7 +179,7 @@
                         </div>
                         <div class="desserts__btn--iconCheck"><i class="far fa-check-circle"></i></div>
                     
-                    </div>
+                    </label>
                 </div>
             </div>
         </div>
@@ -193,12 +192,12 @@
     
     <footer>
         <div class="footer">
-            <p>ohmyfood</p>
+            <a href="./index.html"><p>ohmyfood</p></a>
             <ul class="footer__text">
                 <li class="footer__text--li"><a class="footer__text--lien" href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
                 <li class="footer__text--li"><a class="footer__text--lien" href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
                 <li class="footer__text--li"><a class="footer__text--lien" href="">Mentions légales</a></li>
-                <li class="footer__text--li"><a class="footer__text--lien" href="">Contact</a></li>
+                <li class="footer__text--li"><a class="footer__text--lien" href="mailto:onas_4@hotmail.com">Contact</a></li>
             </ul>
         </div>
     </footer>
