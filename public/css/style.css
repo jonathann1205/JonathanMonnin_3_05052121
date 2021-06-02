@@ -782,7 +782,6 @@ footer p {
 }
 .entre__btn .fa-check-circle {
   transition: 500ms;
-  rotate: 0deg;
 }
 .entre__btn--titre {
   font-weight: 600;
@@ -961,7 +960,6 @@ footer p {
 }
 .plats__btn .fa-check-circle {
   transition: 500ms;
-  rotate: 0deg;
 }
 .plats__btn--titre {
   font-weight: 600;
@@ -1130,7 +1128,6 @@ footer p {
 }
 .desserts__btn .fa-check-circle {
   transition: 500ms;
-  rotate: 0deg;
 }
 .desserts__btn--titre {
   font-weight: 600;
