@@ -24,13 +24,19 @@
             
         }
     }
-    .header__form{
+    .header__texte{
         width: 100%;
-        overflow: hidden;
-        &--champtext{
-            width: 100%;
-            font-family:FontAwesome ,roboto;
-        } 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:roboto ;
+        color:gray;
+        border-image: linear-gradient(180deg, #bebdbd, #eaeaea) 90;
+        background-color: #eaeaea;
+        border-top: 5px solid;
+        & p{
+            margin-left: 5px;
+            font-size: 1.1rem;
+        }    
     }
-     
    

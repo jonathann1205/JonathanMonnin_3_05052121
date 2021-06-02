@@ -173,13 +173,20 @@ p {
   height: auto;
 }
 
-.header__form {
+.header__texte {
   width: 100%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: roboto;
+  color: gray;
+  border-image: linear-gradient(180deg, #bebdbd, #eaeaea) 90;
+  background-color: #eaeaea;
+  border-top: 5px solid;
 }
-.header__form--champtext {
-  width: 100%;
-  font-family: FontAwesome, roboto;
+.header__texte p {
+  margin-left: 5px;
+  font-size: 1.1rem;
 }
 
 footer {
