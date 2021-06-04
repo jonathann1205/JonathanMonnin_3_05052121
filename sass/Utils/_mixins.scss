@@ -48,8 +48,7 @@
     color:black;
     background-color: $colour-gris;
     border-radius: 20px;
-    position: relative;
-    // justify-content: center; 
+    position: relative; 
     align-items: center;
     z-index: 1;
     box-shadow: 3PX 3PX 5px darken($colour-gris,20%);
@@ -112,7 +111,6 @@
     width: 250px;
             height: 77px;
             position: relative;
-            // background-color: white;
             border-bottom-left-radius:20px ;
             border-bottom-right-radius:20px ;
             top: 153px;
@@ -170,8 +168,7 @@
     background-color: $colour-gris;
     border-radius: 20px;
     position: relative;
-    overflow: hidden;
-    // justify-content: center; 
+    overflow: hidden; 
     align-items: center;
     z-index: 1;
     box-shadow: 3PX 3PX 5px darken($colour-gris,20%);
